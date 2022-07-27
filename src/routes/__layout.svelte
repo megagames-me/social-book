@@ -3,13 +3,15 @@
 	import '../app.css';
 </script>
 
-<Header />
-
-<main>
+<!-- yay!!! -->
+<div class="">
+	<Header />
+<main class="">
 	<slot />
 </main>
 
 <footer>
-	
+
 </footer>
 
+</div>

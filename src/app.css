@@ -2,12 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	padding-top: 64px;
+}
+
 @layer utilities {
-	.active {
-		@apply text-slate-200 hover:text-slate-100 !important;
-	}
-	
 	.items a {
-		@apply text-slate-300 hover:text-slate-200;
+		@apply text-slate-400 hover:text-slate-500 no-underline;
+	}
+
+	.website-name {
+		@apply text-slate-200 hover:text-slate-300 font-semibold text-2xl no-underline;
+	}
+
+	.active {
+		@apply text-slate-100 hover:text-slate-300 font-medium !important;
 	}
 }
