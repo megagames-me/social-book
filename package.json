@@ -1,11 +1,15 @@
 {
 	"name": "social-book",
+	"engines": {
+		"node": "16.13.1"
+	},
 	"version": "0.0.1",
+	"license": "GPL-3.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"package": "svelte-kit package",
-		"preview": "vite preview",
+		"preview": "HOST=0.0.0.0 vite preview --host",
 		"prepare": "svelte-kit sync",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
