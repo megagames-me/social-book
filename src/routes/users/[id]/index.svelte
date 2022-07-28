@@ -1,5 +1,7 @@
 <script lang="ts">
-	import type { UserResult } from '$lib/data/Data';
+import type { UserResult } from "$lib/data/datatypes";
+
+
 
 
 	export let user: UserResult;

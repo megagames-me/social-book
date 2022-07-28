@@ -1,4 +1,5 @@
-import { Data, type PostResult } from "$lib/data/Data";
+import { Data } from "$lib/data/Data";
+import type { PostResult } from "$lib/data/datatypes";
 import type NormalRequestHandler from "$lib/RequestHandler";
 
 let db = new Data();

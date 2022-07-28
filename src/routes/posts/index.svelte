@@ -1,5 +1,6 @@
 <script lang="ts">
-	import type { Data, PostsResult } from '$lib/data/Data';
+	import type { Data } from '$lib/data/Data';
+import type { PostsResult } from '$lib/data/datatypes';
 
 	export let posts: PostsResult[];
 </script>

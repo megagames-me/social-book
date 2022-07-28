@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PostResult } from '$lib/data/Data';
+	import type { PostResult } from '$lib/data/datatypes';
 
 	export let post: PostResult;
 </script>
