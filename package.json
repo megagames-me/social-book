@@ -1,8 +1,5 @@
 {
 	"name": "social-book",
-	"engines": {
-		"node": "16.13.1"
-	},
 	"version": "0.0.1",
 	"license": "GPL-3.0",
 	"scripts": {
@@ -19,6 +16,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
+		"@tinymce/tinymce-svelte": "^1.0.0",
 		"@types/cookie": "^0.5.1",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
 		"@typescript-eslint/parser": "^5.27.0",
@@ -29,6 +27,7 @@
 		"postcss": "^8.4.14",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
+		"prisma": "^4.1.0",
 		"svelte": "^3.46.0",
 		"svelte-check": "^2.7.1",
 		"svelte-preprocess": "^4.10.7",
@@ -40,6 +39,8 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
+		"@prisma/client": "4.1.0",
+		"@tailwindcss/typography": "^0.5.4",
 		"cookie": "^0.4.1"
 	}
 }

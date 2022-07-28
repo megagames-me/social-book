@@ -18,4 +18,5 @@ html {
 	.active {
 		@apply text-slate-100 hover:text-slate-300 font-medium !important;
 	}
+
 }
