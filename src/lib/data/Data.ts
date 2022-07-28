@@ -1,8 +1,6 @@
 import prisma from "./prisma";
 import type { PostResult, PostsResult, UserResult, UsersResult } from "./datatypes";
 
-
-
 export class Data {
     constructor() {
         
