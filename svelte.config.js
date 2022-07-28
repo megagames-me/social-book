@@ -16,11 +16,7 @@ const config = {
 		methodOverride: {
 			allowed: ['PATCH', 'DELETE']
 		},
-		vite: {
-            define: {
-                global: {}
-            }
-        }
+		
 	}
 };
 
