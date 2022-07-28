@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Data, Post } from '$lib/data/Data';
+	import type { Data, PostsResult } from '$lib/data/Data';
 
-	export let posts: Post[];
+	export let posts: PostsResult[];
 </script>
 
 <svelte:head>
@@ -15,7 +15,7 @@
 		{#each posts as post}
 			<article>
 				<h2 class="text-2xl"><a href="/posts/{post.id}" class="underline">{post.title}</a>
-					 by <a href="/users/{post.creatorId}" class="underline">{post.creator}</a> <span class="font-thin">[{post.id}]</span></h2>
+					 by <a href="/users/{post.creatorId}" class="underline">{post.creator.username}</a> <span class="font-thin">[{post.id}]</span></h2>
 			</article>
 		{/each}
 	</div>

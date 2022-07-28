@@ -90,6 +90,7 @@ export interface UsersResult {
 
 export interface UserResult extends UsersResult {
     posts: {
+        id: number;
         title: string;
     }[];
 }
@@ -157,6 +158,7 @@ export class Data {
                 posts: {
                     select: {
                         title: true,
+                        id: true
                     }
                 }
             }
