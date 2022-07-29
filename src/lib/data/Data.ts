@@ -4,13 +4,7 @@ import 'dotenv/config'
 
 import type { PostResult, PostsResult, UserResult, UsersResult } from "./datatypes";
 
-const prisma = new PrismaClient({
-    datasources: {
-        db: {
-          url: process.env.DATABASE_URL,
-        }
-      }
-})
+const prisma = new PrismaClient()
 
 
 export class Data {
