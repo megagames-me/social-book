@@ -1,10 +1,11 @@
 
-import { PrismaClient } from '@prisma/client'
+
+import pkg from '@prisma/client';
 
 import type { PostResult, PostsResult, UserResult, UsersResult } from "./datatypes";
 
 
-let prisma = new PrismaClient();
+let prisma = new pkg.PrismaClient();
 
 
 export class Data {
