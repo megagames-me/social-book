@@ -1,9 +1,10 @@
 <script lang="ts">
-	import type { User, Post } from '$lib/data/Data';
+import type { UserResult } from "$lib/data/datatypes";
 
 
-	export let user: User;
-    export let posts: Post[];
+
+
+	export let user: UserResult;
 </script>
 
 <svelte:head>
@@ -18,7 +19,7 @@
         
     <p class="text-2xl mb-3">Description: {user.description}</p>
 
-    <p>Posts: {#each posts as post, i}{i !== 0 ? ", " : ""}<a href="/posts/{post.id}" class="underline">{post.title}</a>{/each}</p>
+    <p>Posts: {#each user.posts as post, i}{i !== 0 ? ", " : ""}<a href="/posts/{post.id}" class="underline">{post.title}</a>{/each}</p>
     <a href="/posts" class="underline">&lArr; Back</a>
 </section>
 

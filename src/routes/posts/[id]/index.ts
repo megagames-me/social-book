@@ -1,14 +1,15 @@
-import { Data, type Post } from "$lib/data/Data";
+import { Data } from "$lib/data/Data";
+import type { PostResult } from "$lib/data/datatypes";
 import type NormalRequestHandler from "$lib/RequestHandler";
 
 let db = new Data();
 
 export interface Output {
-    post?: Post;
+    post?: PostResult;
 }
 
 export const GET: NormalRequestHandler<Output> = async({ params }) => {
-    let post = db.getPost(Number(params.id));
+    let post = await db.getPost(Number(params.id));
     if (post) {
         return {
             status: 200,
