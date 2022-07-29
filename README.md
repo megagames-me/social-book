@@ -1,38 +1,14 @@
-# create-svelte
+# SocialBook
+![License](https://img.shields.io/github/license/megagames-me/social-book) ![Code Size](https://img.shields.io/github/languages/code-size/megagames-me/social-book?style=flat) ![Open Issues](https://img.shields.io/github/issues/megagames-me/social-book) ![Closed Issues](https://img.shields.io/github/issues-closed/megagames-me/social-book) ![Opened Pull Requests](https://img.shields.io/github/issues-pr/megagames-me/social-book) ![Closed Pull Requests](https://img.shields.io/github/issues-pr-closed/megagames-me/social-book) ![Stars](https://img.shields.io/github/stars/megagames-me/social-book?style=social)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+[SocialBook](https://sas-social-book.herokuapp.com/) (name is WIP) is a possible successor to 7C Artifacts. This is currently under development.
 
-## Creating a project
+## Working on SocialBook
 
-If you're seeing this, you've probably already done this step. Congrats!
+Make sure that you are running Node.js v16+.
 
-```bash
-# create a new project in the current directory
-npm init svelte
-
-# create a new project in my-app
-npm init svelte my-app
+First, you must `git clone` this repo and `cd` into it. In the root directory, you must create a `.env` file with the following contents. 
+```.env
+DATABASE_URL="[Insert Postgres URL]"
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Then, run `yarn` or `npm install` (your choice) to install all the dependencies. After this, you must generate the prisma client with `npx prisma generate`. Now, you can run `yarn dev` or `npm run dev` to enter development mode. To build the app and run, use the scripts `build` and `preview` respectively.
