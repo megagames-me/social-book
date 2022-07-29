@@ -1,9 +1,10 @@
 
-import { PrismaClient } from '@prisma/client/edge' 
+import { PrismaClient } from '@prisma/client'
 
 import type { PostResult, PostsResult, UserResult, UsersResult } from "./datatypes";
 
-const prisma = new PrismaClient()
+
+let prisma = new PrismaClient();
 
 
 export class Data {

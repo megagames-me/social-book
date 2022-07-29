@@ -4,9 +4,9 @@
 	"license": "GPL-3.0",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "prisma generate && vite build",
 		"package": "svelte-kit package",
-		"preview": "HOST=0.0.0.0 vite preview --host",
+		"start": "HOST=0.0.0.0 vite preview --host",
 		"prepare": "svelte-kit sync",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
