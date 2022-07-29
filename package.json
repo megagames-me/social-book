@@ -15,7 +15,6 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/kit": "next",
 		"@tinymce/tinymce-svelte": "^1.0.0",
 		"@types/cookie": "^0.5.1",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
@@ -41,6 +40,7 @@
 		"@fontsource/fira-mono": "^4.5.0",
 		"@prisma/client": "4.1.0",
 		"@sveltejs/adapter-node": "^1.0.0-next.85",
+		"@sveltejs/kit": "^1.0.0-next.396",
 		"@tailwindcss/typography": "^0.5.4",
 		"cookie": "^0.4.1"
 	}
