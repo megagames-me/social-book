@@ -1,5 +1,17 @@
-import prisma from "./prisma";
+
+import { PrismaClient } from '@prisma/client/edge' 
+import 'dotenv/config'
+
 import type { PostResult, PostsResult, UserResult, UsersResult } from "./datatypes";
+
+const prisma = new PrismaClient({
+    datasources: {
+        db: {
+          url: process.env.DATABASE_URL,
+        }
+      }
+})
+
 
 export class Data {
     constructor() {
