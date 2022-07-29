@@ -1,6 +1,5 @@
 
 import { PrismaClient } from '@prisma/client/edge' 
-import 'dotenv/config'
 
 import type { PostResult, PostsResult, UserResult, UsersResult } from "./datatypes";
 
