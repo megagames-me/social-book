@@ -17,5 +17,6 @@
 	<p class="text-2xl">
 		This is a demo app for SvelteKit. Go to <a sveltekit:prefetch href="/posts" class="underline">posts</a>.
 	</p>
+	<a href="/api/auth/signin/google?redirect=/">Login with Google</a>
 </section>
 
