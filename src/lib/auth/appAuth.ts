@@ -30,6 +30,7 @@ export const appAuth = new SvelteKitAuth({
 		}
 	},
 	jwtSecret: process.env['JWT_SECRET_KEY'],
-    host: 'http://127.0.0.1:5173',
+    host: process.env['HOST'],
+    protocol: process.env['PROTOCOL'],
 
 });
