@@ -14,7 +14,7 @@ import type { UserResult } from "$lib/data/datatypes";
 
 <section class="px-32 pt-4">
     
-	<h1 class="text-4xl mb-1 font-bold">{user.username}
+	<h1 class="text-4xl mb-1 font-bold">{user.name}
          <span class="font-thin">[{user.id}]</span></h1>
         
     <p class="text-2xl mb-3">Description: {user.description}</p>

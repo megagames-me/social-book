@@ -1,6 +1,6 @@
 
 
-import pkg from '@prisma/client';
+import pkg, { type User } from '@prisma/client';
 
 import type { PostResult, PostsResult, UserResult, UsersResult } from "./datatypes";
 
@@ -21,7 +21,7 @@ export class Data {
                 creatorId: true,
                 creator: {
                     select: {
-                        username: true
+                        name: true
                     }
                 }
             }
@@ -40,7 +40,7 @@ export class Data {
                 content: true,
                 creator: {
                     select: {
-                        username: true
+                        name: true
                     }
                 }
             }
@@ -53,7 +53,7 @@ export class Data {
         return await prisma.user.findMany({
             select: {
                 id: true,
-                username: true,
+                name: true,
                 description: true,
             }
         });
@@ -66,7 +66,7 @@ export class Data {
             },
             select: {
                 id: true,
-                username: true,
+                name: true,
                 description: true,
                 posts: {
                     select: {
@@ -79,5 +79,37 @@ export class Data {
         if (user) return user;
         else return null;
     }
-    
+
+    /**
+     * This method should not be used for an endpoint as it gives private information. This is solely used for authentication
+     * @param email Email of user
+     */
+    public async getUserByEmail(email: string): Promise<User | null> {
+        const user = await prisma.user.findFirst({
+            where: {
+                email: email
+            }
+        })
+        if (user) return user;
+        else return null;
+    }
+
+    /**
+     * This method should not be used for an endpoint as it gives private information. This is solely used for authentication
+     * @param email Email of user, from profile
+     * @param name Full name of user, from profile
+     */
+    public async createUser(email: string, name: string): Promise<boolean> {
+        console.log(email, name);
+        const user = await prisma.user.create({
+            data: {
+                email: email,
+                name: name,
+                description: "Hi, I am a proud SocialBook user!"
+            }
+        });
+        if (user) {
+            return true
+        } else return false;
+    }
 }

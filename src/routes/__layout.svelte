@@ -6,7 +6,7 @@
 </script>
 
 <!-- yay!!! -->
-<div class="">
+<div class="min-h-screen">
 	<Header />
 <main class="">
 	<slot />

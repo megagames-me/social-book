@@ -27,6 +27,11 @@
           <span class="block text-sm font-medium  truncate text-gray-400">{$session.user.connections.google.email}</span>
         </div>
         <ul class="py-1" aria-labelledby="user-menu-button">
+          <li>
+            <a href="/users/{$session.user.id}" class="block py-2 px-4 text-sm  hover:bg-gray-700 text-gray-200 hover:text-white">Profile</a>
+          </li>
+        </ul>
+        <ul class="py-1" aria-labelledby="user-menu-button">
           <!-- <li>
             <a href="#" class="block py-2 px-4 text-sm  hover:bg-gray-700 text-gray-200 hover:text-white">Dashboard</a>
           </li>

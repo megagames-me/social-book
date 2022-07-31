@@ -16,7 +16,7 @@ import type { PostsResult } from '$lib/data/datatypes';
 		{#each posts as post}
 			<article>
 				<h2 class="text-2xl"><a href="/posts/{post.id}" class="underline">{post.title}</a>
-					 by <a href="/users/{post.creatorId}" class="underline">{post.creator.username}</a> <span class="font-thin">[{post.id}]</span></h2>
+					 by <a href="/users/{post.creatorId}" class="underline">{post.creator.name}</a> <span class="font-thin">[{post.id}]</span></h2>
 			</article>
 		{/each}
 	</div>

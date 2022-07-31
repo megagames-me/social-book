@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { session } from '$app/stores';
 import Dropdown from './Dropdown.svelte';
+console.log($session);
 </script>
 
 <header class="fixed w-full top-0 left-0">

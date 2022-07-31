@@ -25,7 +25,8 @@ declare namespace App {
 					hd: string,
 					provider: string;
 				}
-			}
+			},
+			id: number
 			
 		}
 	}
