@@ -27,7 +27,7 @@ export class Data {
             }
         });
     }
-
+// here, go to the bottom of the file
     public async getPost(id: number): Promise<PostResult | null> {
         const post = await prisma.post.findFirst({
             where: {
@@ -59,6 +59,11 @@ export class Data {
         });
     }
 
+    /**
+     * Gets an api-safe user object using an ID
+     * @param id ID of the user
+     * @returns The user with the corresponding ID
+     */
     public async getUser(id: number): Promise<UserResult | null> {
         const user = await prisma.user.findFirst({
             where: {
@@ -83,6 +88,7 @@ export class Data {
     /**
      * This method should not be used for an endpoint as it gives private information. This is solely used for authentication
      * @param email Email of user
+     * @returns The user with the corresponding email
      */
     public async getUserByEmail(email: string): Promise<User | null> {
         const user = await prisma.user.findFirst({
@@ -101,6 +107,7 @@ export class Data {
      */
     public async createUser(email: string, name: string): Promise<boolean> {
         console.log(email, name);
+        if (!Data.allowedEmail(email)) return false;
         const user = await prisma.user.create({
             data: {
                 email: email,
@@ -111,5 +118,9 @@ export class Data {
         if (user) {
             return true
         } else return false;
+    }
+
+    public static allowedEmail(email: string): boolean {
+        return true;
     }
 }

@@ -9,13 +9,12 @@
       return false;
     }
 
-    // console.log($session)
-
 </script>
 
 <div>
+  <!-- If the user is logged in, show this page. -->
     {#if $session?.user}
-   
+
     <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4  focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
         <span class="sr-only">Open user menu</span>
         <img class="w-8 h-8 rounded-full" referrerpolicy="no-referrer" src={$session.user.connections.google.picture} alt={$session.user.connections.google.name}>
