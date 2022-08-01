@@ -64,6 +64,9 @@ export const appAuth = new SvelteKitAuth({
 				return undefined
 			}
 			return session;
+		},
+		redirect(url: string): string {
+			return "/"
 		}
 	},
 	jwtSecret: process.env['JWT_SECRET_KEY'],
