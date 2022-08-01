@@ -9,11 +9,11 @@ Make sure that you are running Node.js v16+.
 
 First, you must `git clone` this repo and `cd` into it. In the root directory, you must create a `.env` file with the following contents. 
 ```.env
-DATABASE_URL="[Insert Postgres URL]"
+HEROKU_POSTGRESQL_BROWN_URL="[Insert Postgres URL]"
 GOOGLE_OAUTH_CLIENT_ID="[Insert Client ID]"
 GOOGLE_OAUTH_CLIENT_SECRET="[Insert Secret]"
 JWT_SECRET_KEY="[Insert JWT Key]"
-HOST="[Insert Name of Host]"
-PROTOCOL="[Insert Protocol (http or https)]"
+SK_HOST="[Insert Name of Host]"
+SK_PROTOCOL="[Insert Protocol (http or https)]"
 ```
 Then, run `yarn` or `npm install` (your choice) to install all the dependencies. After this, you must generate the prisma client with `npx prisma generate`. Now, you can run `yarn dev` or `npm run dev` to enter development mode. To build the app and run, use the scripts `build` and `preview` respectively.
