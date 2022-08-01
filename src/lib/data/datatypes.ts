@@ -3,21 +3,18 @@ export interface PostsResult {
     title: string;
     creatorId: number;
     creator: {
-        username: string;
+        name: string;
     }
 }
 
 export interface PostResult extends PostsResult {
     content: string;
-    creator: {
-        username: string;
-    }
 }
 
 export interface UsersResult {
     id: number;
-    username: string;
-    description: string;
+    name: string;
+    description: string | null;
 }
 
 export interface UserResult extends UsersResult {

@@ -10,7 +10,26 @@ declare namespace App {
 
 	// interface Platform {}
 
-	// interface Session {}
+	interface Session {
+		user?: {
+			connections:{
+				google : {
+					sub: string;
+					name: string;
+					given_name: string;
+					family_name: string;
+					picture: string;
+					email: string;
+					email_verified: boolean,
+					locale: string,
+					hd: string,
+					provider: string;
+				}
+			},
+			id: number
+			
+		}
+	}
 
 	// interface Stuff {}
 }
