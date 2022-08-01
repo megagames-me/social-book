@@ -60,7 +60,7 @@ export const appAuth = new SvelteKitAuth({
 		// @ts-ignore This is ignored because this is the only way to deny login bruh
 		session(token: JWT, session: Session) {
 			// Log out if token is denied
-			if (token.deny === true || !Data.allowedEmail(session.user.email)) {
+			if (token.deny === true || !Data.allowedEmail(session?.user?.email)) {
 				return undefined
 			}
 			return session;
