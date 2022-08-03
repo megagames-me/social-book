@@ -8,7 +8,20 @@
 		<!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" /> -->
 	</head>
 	<body>
+		<!-- flippin bozo, you can't hack me :) - anvay -->
 		<div>%sveltekit.body%</div>
 		<script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+		<script>
+			console.print = function (...args) {
+				queueMicrotask (console.log.bind (console, ...args));
+			}
+
+			// Code to make sure you don't get hacked mister
+			document.addEventListener("DOMContentLoaded", () => {
+				console.print("%cWARNING!", "color:white;background-color:red;font-size:18pt;")
+			console.print("%cThis tool is for developers. If someone asks you to paste something here, it is a scam. You are being HACKED. If you know what you are doing, however, join our team pls!", "font-size:14pt;")
+			})
+			
+		</script>
 	</body>
 </html>

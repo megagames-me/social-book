@@ -5,7 +5,7 @@ import Dropdown from './Dropdown.svelte';
 console.log($session);
 </script>
 
-<header class="fixed w-full top-0 left-0">
+<header class="fixed w-full top-0 left-0 z-[100000]">
 	<div class="hidden active items"><a href="/">m</a></div>
 	<nav class="bg-gray-900 shadow-2xl flex justify-between items-center py-4 text-white px-6">
 		<!-- Left -->

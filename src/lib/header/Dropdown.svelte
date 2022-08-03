@@ -20,7 +20,7 @@
         <img class="w-8 h-8 rounded-full" referrerpolicy="no-referrer" src={$session.user.connections.google.picture} alt={$session.user.connections.google.name}>
       </button>
       <!-- Dropdown menu -->
-      <div class="hidden z-50 my-4 text-slate-white list-none  rounded divide-y 100 shadow bg-slate-800 divide-slate-700" id="user-dropdown">
+      <div class="hidden z-[10000000000] my-4 text-slate-white list-none  rounded divide-y 100 shadow bg-slate-800 divide-slate-700" id="user-dropdown">
         <div class="py-3 px-4">
           <span class="block text-sm  text-white">{$session.user.connections.google.name}</span>
           <span class="block text-sm font-medium  truncate text-gray-400">{$session.user.connections.google.email}</span>
